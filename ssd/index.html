@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+  <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+       <script src="//unpkg.com/xdomain@0.8.2/dist/xdomain.min.js"></script>
+        
+   
+
+     
+
+  </head>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin-left: 50px;
+      margin-right: 50px;
+      margin-top: 20px;
+      display:block;
+   
+}
+
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #414141; /* Blue */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+ 
+ 
+  
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.ImageBorder
+{
+    border-width: 1px;
+    border-color:rgb(209, 207, 207);
+    border-style: solid;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(209, 207, 207);
+    box-shadow: 0px 3px 5px grey;
+}
+#imgInp {
+   opacity: 0;
+   position: absolute;
+   z-index: -1;
+}
+
+  </style>
+  
+
+<body>
+
+    <nav style="box-shadow:0px 3px 5px grey;border-radius:28px;margin-bottom: 20px;font-size: 20px" class="navbar navbar-expand-lg navbar-dark bg-dark animated fadeInDown delay-0.5s">
+        <a style="margin-left:10px;font-size: 25px" class="navbar-brand" href="#">PWP</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">About Us</a>
+          
+          </div>
+        </div>
+      </nav>
+
+
+
+      
+     
+
+  <div id="table" style="margin-left:100px;margin-right: 100px;margin-top: 40px">
+  	<form id="form1" runat="server">
+  		<h5 style="font-weight: bold;">Welcome, please load the image for detection.</h3><br><br>
+
+
+	<label for="imgInp" id="inputimg" class="btn btn-lg btn-outline-dark">Open Image</label>
+  <input type='file' id="imgInp" class="" /><br>
+  <img id="blah" class="ImageBorder" style="visibility: hidden;margin-top:20px;margin-bottom:20px;max-width:100%;max-height: 100%" src="#" alt="your image" />
+</form>
+<!--  <img src="books.jpg" id="book" /> -->
+  
+      <h6 style="border-style: solid;border-color:black;border-radius:10px;width:300px;border-width: 1px;padding: 5px;background-color:lightgrey;visibility: hidden;" id="loaded">Image Loaded!</h6>
+      <button style="border-radius:18px;margin-right: 10px;visibility: hidden;" type="button" class="btn btn-lg btn-outline-dark" id="run">Run</button>
+  
+      <!-- <button style="border-radius:18px" type="button" class="btn btn-outline-dark" id="toggle">Toggle Image</button> -->
+      <br><br>
+      <div style="margin-bottom: 10px;visibility: hidden;" class="loader" id="loader">
+        </div>
+
+        <h6 id="loaderdescription" style="border-style: solid;border-color:black;border-radius:10px;width:300px;border-width: 1px;padding: 5px;background-color:lightgrey;visibility: hidden;">HI</h6>
+      
+          
+ 
+  
+  <img  id="image"  class="ImageBorder"></img> <br><br>
+  <canvas id="canvas"   width="264" height="312"></canvas><br><br>
+
+
+
+<button id="datasubmit" class="btn btn-lg btn-outline-dark" style="margin-bottom: 50px;float: left; visibility:hidden;" >Submit Data</button><br><br>
+
+
+<div id="donutchart" style="width: 900px; height: 500px;margin-top: 20px"></div>
+</div>
+<!-- <div id="submitdata" style="text-align: center;visibility:hidden;margin-top:50px">
+<form method="post" action="charts.html">
+<button id="datasubmit" class="btn btn-lg btn-outline-dark" style="margin-bottom: 50px" >Submit Data</button>
+</form> -->
+</div>
+<br><br>
+<img id="tempimg"/>
+ 
+    
+</body>
+
+<script src="index.js"></script>
+
+</html>
