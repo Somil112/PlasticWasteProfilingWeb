@@ -1,4 +1,5 @@
-![](https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png =250x250) # PlasticWasteProfilingWeb
+![](https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png)
+<img src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="48"># PlasticWasteProfilingWeb
 A fully functioning web application to detect plastic waste.
 
 ## Installation Instructions
