@@ -3,7 +3,7 @@ A fully functioning web application to detect plastic waste.
 
 ## Installation Instructions
 
-### Step 1:Pre-requisite Softwares to be installed
+### Step 1: Pre-requisite Softwares to be installed
 1. Node 
 2. NPM 
 
