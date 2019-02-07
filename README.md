@@ -1,4 +1,4 @@
-<img src="https://github.com/Somil112/PlasticWasteProfilingWeb/blob/master/resources/logo.png" height="50" width="50"> # PlasticWasteProfilingWeb
+# <img src="https://github.com/Somil112/PlasticWasteProfilingWeb/blob/master/resources/logo.png" height="50" width="50"> PlasticWasteProfilingWeb
 A fully functioning web application to detect plastic waste.
 
 ## Installation Instructions
