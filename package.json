@@ -6,17 +6,21 @@
   "engines": {
     "node": "8.x.x",
     "npm": "6.4.1",
-    "yarn":"1.x"
+    "yarn": "1.x"
   },
   "dependencies": {
     "@tensorflow/tfjs": "0.13.3",
     "animate.css": "^3.7.0",
     "firebase": "^5.8.1",
+    "jquery": "^3.3.1",
     "parcel": "^1.11.0",
+    "popper.js": "^1.14.7",
     "resize-image": "^0.1.0"
   },
   "scripts": {
-    "start": "NODE_ENV=development parcel ssd/index.html --no-hmr --open "
+    "dev": "NODE_ENV=development parcel ssd/index.html ssd/dashboard.html --no-hmr --open ",
+    "heroku-postbuild":"parcel build ssd/index.html ssd/dashboard.html --out-dir docs --public-url ./",
+    "start":"parcel ssd/index.html --out-dir docs"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

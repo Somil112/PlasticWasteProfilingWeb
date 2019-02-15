@@ -30,12 +30,13 @@ GoogleCharts.load(drawChart);
 
 
 function drawChart() {
+  
 
      const data = GoogleCharts.api.visualization.arrayToDataTable([
-        ['Product', 'Current Detection'],
-        ['Coca Cola', coca_count],
-        ['Lays', lays_count],
-        ['Maggi', maggi_count]
+        ['Product', 'Current Detection',{role:'style'}],
+        ['Coca Cola', coca_count,'red'],
+        ['Lays', lays_count,'blue'],
+        ['Maggi', maggi_count,'yellow']
     ]);
   
 
@@ -44,7 +45,21 @@ function drawChart() {
           title: 'Plastic Waste Profiling',
           pieHole: 0.4,
           animation:{duration: 3000,
-        easing: 'out', "startup":true}
+        easing: 'out', "startup":true
+      },
+      backgroundColor:{fill:'transparent'},
+      titleTextStyle:{color:"ffffff",fontName:'Roboto',fontSize:30,bold:false},
+      
+      hAxis: {
+        textStyle: {
+            color: '#ffffff'
+        }
+    },
+    vAxis: {
+        textStyle: {
+            color: '#ffffff'
+        }
+    }
         };
     const pie_1_chart = new GoogleCharts.api.visualization.ColumnChart(document.getElementById('donutchart'));
 
@@ -206,13 +221,15 @@ runButton.onclick = async () => {
   
   var imgurl = c.toDataURL("image/png");
   var file = dataURLtoFile(imgurl, imgfile.name);
-  console.log(file);
+  // console.log(file);
+
+  //Store the images into firebase in real time
   // storageRef.child('images/' + file.name).put(file);
   
 
-  console.log("Coca cola:" + coca_count);
-  console.log("Lays:" + lays_count);
-  console.log("Maggi:" + maggi_count);
+  // console.log("Coca cola:" + coca_count);
+  // console.log("Lays:" + lays_count);
+  // console.log("Maggi:" + maggi_count);
 
 
   ds.onclick = () => {
