@@ -15,6 +15,9 @@ Go to the directory containing the package.json file in cmd and type in:
 
 After the node package modules have been installed run:
  
-    npm start
+    yarn dev
+  
+## Description
+To address the growing issue of plastic use, we have created a software, through which you can detect plastic products from garbage dumps/sewers etc. This will help the government/people know the companies which contribute the most amounts of plastic, which will in turn warn the companies to reduce their plastic use.
     
 
